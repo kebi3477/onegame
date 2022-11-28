@@ -2,6 +2,7 @@ const member = new Member();
 const unit = new Unit();
 const util = new Util();
 let cnt = 0;   
+const apppendInput = document.querySelector('.ord__lottery--append-input');
 const appendButton = document.querySelector('.ord__lottery--append-btn');
 const radnomButton = document.querySelector('.ord__lottery--random-btn');
 
@@ -56,7 +57,7 @@ function pickUnit() {
     })
 }
 
-appendButton.addEventListener('click', function() {
+function addMember() {
     const input = document.querySelector('.ord__lottery--append-input');
 
     if(input.value !== "") {
@@ -65,8 +66,17 @@ appendButton.addEventListener('click', function() {
 
     printMember();
     input.value = "";
+}
+
+appendButton.addEventListener('click', function() {
+    addMember();
 })
 
+apppendInput.addEventListener('keydown', function(e) {
+    if(e.keyCode === 13) {
+        addMember();
+    }
+})
 
 radnomButton.addEventListener('click', function() {
     cnt = 0;      
