@@ -4,24 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./index.css">
     <title>원랜디 추첨기</title>
 </head>
-<body>
-    <h3>원랜디 추첨기</h3>
-    <div class="members">
-        <div class="members__label">멤버 추가</div>
-        <input type="text" class="members__input">
-        <button class="members__button">추가</button>
-    </div>
-    <div class="members__list">
+<body class="ord">
+    <div class="ord__container">
+        <header class="ord__header">
+            <div class="ord__header--side">
+                <h1 class="ord__logo">ORD</h1> 
+            </div>
 
+            <div class="ord__header--side">
+                <nav class="ord__menu">
+                    <li class="ord__menu--item">추첨기</li>
+                </nav>
+            </div>
+        </header>
+
+        <div class="ord__contents">
+            <div class="ord__lottery">
+                <div class="ord__lottery--contents">
+                    <div class="ord__lottery--list">
+                        
+                    </div>
+                </div>
+
+                <div class="ord__lottery--function">
+                    <div class="ord__lottery--players"></div>
+                    
+                    <div class="ord__lottery--append">
+                        <input class="ord__lottery--append-input" type="text" placeholder="사용자 입력" />
+                        <button class="ord__lottery--append-btn">추가</button>
+                    </div>
+
+                    <div class="ord__lottery--random-btn">추첨</div>
+                </div>
+            </div>
+        </div>
     </div>
-    <button class="print__button">출력</button>
-    <div class="print__list"></div>
+    
     <script src="module/util.js"></script>
     <script src="module/member.js"></script>
     <script src="module/unit.js"></script>
-    <script src="index.js"></script>
+    <script src="index.js"></script> -->
 </body>
 </html>

@@ -1,8 +1,40 @@
-.members {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: .5rem;
+:root {
+    --ord-back: rgba(33, 36, 43, 1);
+    --ord-gray: rgb(42, 42, 51);
 }
-.members__list {
-    display: grid;;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; list-style: none; font-size: 16px; font-weight: 400; color: #FFF; text-decoration: none; border: none; outline: none; background: transparent; }
+
+.ord { width: 100vw; height: 100vh; overflow: hidden; }
+.ord__container { width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; background-color: var(--ord-back); }
+.ord__header { width: 100%; display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto; gap: 0; border-bottom: 2px solid var(--ord-gray); }
+.ord__header--side { padding: 0.5rem 1.5rem; }
+.ord__header--side:first-child { border-right: 2px solid var(--ord-gray); }
+.ord__header--side:last-child { display: flex; justify-content: flex-start; align-items: center; }
+.ord__logo { width: 100%; font-size: 36px; font-weight: 600; }
+.ord__menu { display: inline-flex; justify-content: center; align-items: center; gap: 1rem; }
+.ord__menu--item { font-size: 18px; font-weight: 600; cursor: pointer; }
+.ord__contents { width: 100%; height: 100%; }
+.ord__lottery { width: 100%; height: 100%; display: grid; grid-template-rows: auto 1fr; gap: 4rem; place-items: center; }
+.ord__lottery--contents { padding-top: 4rem; width: 100%; min-height: 300px; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4rem; }
+.ord__lottery--players { display: inline-flex; justify-content: center; align-items: center; gap: 0.5rem; font-size: 14px; font-weight: 300; }
+.ord__lottery--players::before { content: '['; }
+.ord__lottery--players::after { content: ']'; }
+.ord__lottery--list { display: flex; justify-content: space-evenly; align-items: center; gap: 2rem; }
+.ord__lottery--item { padding: 0.5rem 0.75rem; display: inline-flex; flex-direction: column; justify-content: flex-start; align-items: center; gap: 1.5rem; }
+.ord__lottery--profile { padding-top: 100%; position: relative; width: 150px; display: flex; justify-content: center; align-items: center; overflow: hidden; border-radius: 0.5rem; }
+.ord__lottery--profile img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
+.ord__lottery--player { font-size: 24px; font-weight: 600; }
+.ord__lottery--name { font-size: 14px; }
+.ord__lottery--type { font-size: 16px; font-weight: 700; }
+.ord__lottery--function { width: max-content; display: inline-flex; flex-direction: column; justify-content: center; align-items: center; gap: 1rem; align-self: start; }
+.ord__lottery--append { display: inline-flex; justify-content: center; align-items: center; gap: 1rem; }
+.ord__lottery--append-input { padding: 0.5rem 0.75rem; background: rgb(42, 43, 47); border-radius: 0.5rem; }
+.ord__lottery--append-btn { padding: 0.5rem 0.75rem; border-radius: 0.5rem; display: inline-flex; justify-content: center; align-items: center; text-align: center; cursor: pointer; background: deeppink; }
+.ord__lottery--random-btn { padding: 0.5rem 0.75rem; border-radius: 0.5rem; width: 100%; display: inline; justify-content: center; align-items: center; text-align: center; background: deepskyblue; cursor: pointer; }
+
+.hi { color: #009eef; } /* 히든 */
+.tr { color: #1111fe; } /* 초월 */
+.im { color: #fa8072; } /* 불멸 */
+.et { color: #ff50ff; } /* 영원 */
+.lm { color: #7c0100; } /* 제한 */
+.rd { color: #4169e1; } /* 랜덤 */

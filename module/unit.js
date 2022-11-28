@@ -221,7 +221,30 @@ class Unit {
 
     #init() {
         this.unitJSON.forEach(el => {
-            el.value.forEach(json => json.type = el.type);
+            el.value.forEach(json => {
+                switch(el.type) {
+                    case "히든":
+                        json.alpha = 'hi';
+                        break;
+                    case "초월":
+                        json.alpha = 'tr';
+                        break;
+                    case "불멸":
+                        json.alpha = 'im';
+                        break;
+                    case "영원":
+                        json.alpha = 'et';
+                        break;
+                    case "제한":
+                        json.alpha = 'lm';
+                        break;
+                    case "랜덤":
+                        json.alpha = 'rd';
+                        break;
+                }
+
+                json.type = el.type
+            });
             this.unit.push(...el.value);
         })
     }
