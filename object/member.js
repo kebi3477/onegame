@@ -2,7 +2,7 @@ class Member {
     names = []
 
     add(name) { 
-        this.names.push(name);
+        name !== "" && this.names.push(name);
     }
 
     remove(name) {
