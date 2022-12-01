@@ -14,8 +14,16 @@
 .ord__menu { display: inline-flex; justify-content: center; align-items: center; gap: 1rem; }
 .ord__menu--item { font-size: 18px; font-weight: 600; cursor: pointer; }
 .ord__contents { width: 100%; height: 100%; }
+
 .ord__lottery { width: 100%; height: 100%; display: grid; grid-template-rows: auto 1fr; gap: 4rem; place-items: center; }
 .ord__lottery--contents { padding-top: 4rem; width: 100%; min-height: 300px; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4rem; }
+.ord__lottery--select-typies { display: flex;  gap: 1.5rem;}
+.ord__lottery--select-type { display: flex; gap: .3rem; cursor: pointer; }
+.ord__lottery--select-type:hover { color: #dfdfdf; }
+.ord__lottery--select-input { display: none; }
+.ord__lottery--select-box { width: 20px; height: 20px; border: 5px solid #fff; background-color: #fff; border-radius: 100%; transition: .2s;}
+.ord__lottery--select-input:checked ~ .ord__lottery--select-box { background-color: #009eef; }
+
 .ord__lottery--players { display: inline-flex; justify-content: center; align-items: center; gap: 0.5rem; font-size: 14px; font-weight: 300; }
 .ord__lottery--players::before { content: '['; }
 .ord__lottery--players::after { content: ']'; }

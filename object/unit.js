@@ -222,34 +222,24 @@ class Unit {
     #init() {
         this.unitJSON.forEach(el => {
             el.value.forEach(json => {
-                switch(el.type) {
-                    case "히든":
-                        json.alpha = 'hi';
-                        break;
-                    case "초월":
-                        json.alpha = 'tr';
-                        break;
-                    case "불멸":
-                        json.alpha = 'im';
-                        break;
-                    case "영원":
-                        json.alpha = 'et';
-                        break;
-                    case "제한":
-                        json.alpha = 'lm';
-                        break;
-                    case "랜덤":
-                        json.alpha = 'rd';
-                        break;
-                }
-
+                json.alpha = util.getTypeByENG(el.type);
                 json.type = el.type
             });
             this.unit.push(...el.value);
         })
     }
 
-    getRandom() {
-        return this.unit[Math.floor(Math.random() * (this.unit.length))];
+    getRandom(list) {
+        let unit;
+        
+        while(1) {
+            unit = this.unit[Math.floor(Math.random() * (this.unit.length))];
+
+            if(list.includes(unit.alpha)) {
+                break;
+            }
+        }
+
+        return unit;
     }
 }
