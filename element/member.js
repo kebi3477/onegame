@@ -57,8 +57,6 @@ class MemberDOM extends HTMLElement {
                 <input class="ord__lottery--append-input" type="text" placeholder="사용자 입력" />
                 <button class="ord__lottery--append-btn">추가</button>
             </div>
-
-            <div class="ord__lottery--random-btn">추첨</div>
         `;
     }
 }

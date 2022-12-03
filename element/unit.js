@@ -42,6 +42,9 @@ class UnitDOM extends HTMLElement {
         members.forEach(member => {
             const character = this.unit.getRandom(this.getSelectedTypies());
             const item = util.createDom('div', 'ord__lottery--item');
+            const header = util.createDom('div', 'ord__lottery--item-header');
+            const contents = util.createDom('div', 'ord__lottery--item-contents');
+            const characherImg = util.createDom('img', 'ord__lottery--characher-img');
             const player = util.createDom('span', 'ord__lottery--item-player');
             const thumbnail = util.createDom('div', 'ord__lottery--profile');
             const img = util.createDom('img');
@@ -51,14 +54,18 @@ class UnitDOM extends HTMLElement {
             const attack = util.createDom('span', 'ord__lottery--attack', character.beta);
 
             member = member.textContent;
+            characherImg.alt = character.name;
+            characherImg.src = character.characterImage;
             img.alt = character.name;
-            img.src = character.image;
+            img.src = character.unitImage;
             player.textContent = member;
             name.textContent = character.name;
             attack.textContent = character.attack;
             type.textContent = character.type;
 
-            item.append(player, thumbnail, name, info);
+            item.append(header, contents);
+            header.append(characherImg, player, thumbnail);
+            contents.append(name, info);
             info.append(attack, type)
             thumbnail.append(img);
             wrapper.append(item);
@@ -102,7 +109,10 @@ class UnitDOM extends HTMLElement {
     
     render() {
         this.innerHTML = `
-            <div class="ord__lottery--select-typies"></div>
+            <div class="ord__lottery--function">
+                <div class="ord__lottery--select-typies"></div>
+                <div class="ord__lottery--random-btn">추첨</div>
+            </div>
             <div class="ord__lottery--lists">
                 <div class="ord__lottery--list"></div>
             </div>

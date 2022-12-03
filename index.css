@@ -1,6 +1,6 @@
 :root {
-    --ord-back: rgba(33, 36, 43, 1);
-    --ord-gray: rgb(42, 42, 51);
+    --ord-back: #121128;
+    --ord-gray: #1d1933;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; list-style: none; font-size: 16px; font-weight: 400; color: #FFF; text-decoration: none; border: none; outline: none; background: transparent; }
 
@@ -15,9 +15,10 @@
 .ord__menu--item { font-size: 18px; font-weight: 600; cursor: pointer; }
 .ord__contents { width: 100%; height: 100%; }
 
-.ord__lottery { width: 100%; height: 100%; display: grid; grid-template-rows: 1fr 0.5fr; gap: 2rem; place-items: center; }
+.ord__lottery { width: 100%; height: 100%; display: grid; grid-template-rows: 1fr 0.3fr; gap: 2rem; place-items: center; }
 .ord__lottery--contents { width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2rem; }
-.ord__lottery--select-typies { display: flex; gap: 1.5rem; }
+.ord__lottery--function { margin: 0 auto; display: inline-flex; flex-direction: column; justify-content: center; align-items: center; gap: 1rem; }
+.ord__lottery--select-typies { display: flex; gap: 1rem; }
 .ord__lottery--select-type { display: flex; gap: .3rem; cursor: pointer; }
 .ord__lottery--select-type:hover { color: #dfdfdf; }
 .ord__lottery--select-input { display: none; }
@@ -27,11 +28,14 @@
 .ord__lottery--players { display: inline-flex; justify-content: center; align-items: center; gap: 0.5rem; font-size: 14px; font-weight: 300; }
 .ord__lottery--player { font-size: 24px; font-weight: 600; cursor: pointer; }
 .ord__lottery--player:hover { color: #dfdfdf }
-.ord__lottery--list { display: flex; justify-content: space-evenly; align-items: center; gap: 2rem; }
-.ord__lottery--item { padding: 0.5rem 0.75rem; display: inline-flex; flex-direction: column; justify-content: flex-start; align-items: center; gap: 1rem; }
-.ord__lottery--item-player { font-size: 24px; font-weight: 600; cursor: pointer; }
-.ord__lottery--profile { padding-top: 100%; position: relative; width: 150px; display: flex; justify-content: center; align-items: center; overflow: hidden; border-radius: 0.5rem; }
-.ord__lottery--profile img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
+.ord__lottery--list { display: flex; justify-content: space-evenly; align-items: center; gap: 1rem; }
+.ord__lottery--item { width: 350px; display: grid; grid-template-rows: 1fr auto; gap: 0.5rem; overflow: hidden; }
+.ord__lottery--item-player { padding: 0.25rem 0.5rem; position: absolute; left: 1rem; top: 1rem; background: #121128ee; border-radius: 0.5rem; backdrop-filter: blur(2px); font-size: 16px; font-weight: 700; color: #FFFFFF; cursor: pointer; }
+.ord__lottery--item-header { position: relative; width: 100%; height: 25vh; }
+.ord__lottery--item-contents { padding: 2rem; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1rem; width: 100%; background: #1d1933; border-radius: 0.5rem; }
+.ord__lottery--characher-img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 0.5rem;  }
+.ord__lottery--profile { position: absolute; left: 50%; bottom: 5%; width: 80px; height: 80px; display: flex; justify-content: center; align-items: center; overflow: hidden; border-radius: 50%; transform: translate(-50%, 50%); }
+.ord__lottery--profile img { width: 100%; height: 100%; object-fit: cover; }
 .ord__lottery--name { font-size: 14px; }
 .ord__lottery--info { display: inline-flex; justify-content: center; align-items: center; gap: 0.5rem; }
 .ord__lottery--attack { padding: 0.25rem 0.5rem; font-size: 14px; font-weight: 700; border-radius: 0.25rem; background: #FFFFFF; }
