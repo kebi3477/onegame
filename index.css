@@ -15,9 +15,9 @@
 .ord__menu--item { font-size: 18px; font-weight: 600; cursor: pointer; }
 .ord__contents { width: 100%; height: 100%; }
 
-.ord__lottery { width: 100%; height: 100%; display: grid; grid-template-rows: auto 1fr; gap: 4rem; place-items: center; }
-.ord__lottery--contents { padding-top: 4rem; width: 100%; min-height: 300px; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 4rem; }
-.ord__lottery--select-typies { display: flex;  gap: 1.5rem;}
+.ord__lottery { width: 100%; height: 100%; display: grid; grid-template-rows: 1fr 0.5fr; gap: 2rem; place-items: center; }
+.ord__lottery--contents { width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 2rem; }
+.ord__lottery--select-typies { display: flex; gap: 1.5rem; }
 .ord__lottery--select-type { display: flex; gap: .3rem; cursor: pointer; }
 .ord__lottery--select-type:hover { color: #dfdfdf; }
 .ord__lottery--select-input { display: none; }
@@ -25,26 +25,29 @@
 .ord__lottery--select-input:checked ~ .ord__lottery--select-box { background-color: #009eef; }
 
 .ord__lottery--players { display: inline-flex; justify-content: center; align-items: center; gap: 0.5rem; font-size: 14px; font-weight: 300; }
-.ord__lottery--players::before { content: '['; }
-.ord__lottery--players::after { content: ']'; }
 .ord__lottery--player { font-size: 24px; font-weight: 600; cursor: pointer; }
 .ord__lottery--player:hover { color: #dfdfdf }
 .ord__lottery--list { display: flex; justify-content: space-evenly; align-items: center; gap: 2rem; }
-.ord__lottery--item { padding: 0.5rem 0.75rem; display: inline-flex; flex-direction: column; justify-content: flex-start; align-items: center; gap: 1.5rem; }
+.ord__lottery--item { padding: 0.5rem 0.75rem; display: inline-flex; flex-direction: column; justify-content: flex-start; align-items: center; gap: 1rem; }
 .ord__lottery--item-player { font-size: 24px; font-weight: 600; cursor: pointer; }
 .ord__lottery--profile { padding-top: 100%; position: relative; width: 150px; display: flex; justify-content: center; align-items: center; overflow: hidden; border-radius: 0.5rem; }
 .ord__lottery--profile img { position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
 .ord__lottery--name { font-size: 14px; }
-.ord__lottery--type { font-size: 16px; font-weight: 700; }
+.ord__lottery--info { display: inline-flex; justify-content: center; align-items: center; gap: 0.5rem; }
+.ord__lottery--attack { padding: 0.25rem 0.5rem; font-size: 14px; font-weight: 700; border-radius: 0.25rem; background: #FFFFFF; }
+.ord__lottery--type { padding: 0.25rem 0.5rem; font-size: 14px; font-weight: 700; border-radius: 0.25rem; background: #FFFFFF; }
 .ord__lottery--function { width: max-content; display: inline-flex; flex-direction: column; justify-content: center; align-items: center; gap: 1rem; align-self: start; }
 .ord__lottery--append { display: inline-flex; justify-content: center; align-items: center; gap: 1rem; }
 .ord__lottery--append-input { padding: 0.5rem 0.75rem; background: rgb(42, 43, 47); border-radius: 0.5rem; }
 .ord__lottery--append-btn { padding: 0.5rem 0.75rem; border-radius: 0.5rem; display: inline-flex; justify-content: center; align-items: center; text-align: center; cursor: pointer; background: deeppink; }
 .ord__lottery--random-btn { padding: 0.5rem 0.75rem; border-radius: 0.5rem; width: 100%; display: inline; justify-content: center; align-items: center; text-align: center; background: deepskyblue; cursor: pointer; }
 
-.hi { color: #009eef; } /* 히든 */
-.tr { color: #1111fe; } /* 초월 */
-.im { color: #fa8072; } /* 불멸 */
-.et { color: #ff50ff; } /* 영원 */
-.lm { color: #7c0100; } /* 제한 */
-.rd { color: #4169e1; } /* 랜덤 */
+.hi { background: #009eef; } /* 히든 */
+.tr { background: #1111fe; } /* 초월 */
+.im { background: #fa8072; } /* 불멸 */
+.et { background: #ff50ff; } /* 영원 */
+.lm { background: #7c0100; } /* 제한 */
+.rd { background: #4169e1; } /* 랜덤 */
+
+.ad { background: #ff8200; } /* 물리데미지 */
+.ap { background: #ff80ff; } /* 마법데미지 */

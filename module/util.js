@@ -31,4 +31,19 @@ class Util {
         
         return eng;
     }
+
+    getAttackByENG(ko) {
+        let eng = '';
+
+        switch(ko) {
+            case "물리":
+                eng = 'ad';
+                break;
+            case "마법":
+                eng = 'ap';
+                break;
+        }
+        
+        return eng;
+    }
 }

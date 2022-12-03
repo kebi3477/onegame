@@ -46,16 +46,20 @@ class UnitDOM extends HTMLElement {
             const thumbnail = util.createDom('div', 'ord__lottery--profile');
             const img = util.createDom('img');
             const name = util.createDom('span', 'ord__lottery--name');
+            const info = util.createDom('div', 'ord__lottery--info');
             const type = util.createDom('span', 'ord__lottery--type', character.alpha);
+            const attack = util.createDom('span', 'ord__lottery--attack', character.beta);
 
             member = member.textContent;
-            player.textContent = member;
-            name.textContent = character.name;
             img.alt = character.name;
             img.src = character.image;
+            player.textContent = member;
+            name.textContent = character.name;
+            attack.textContent = character.attack;
             type.textContent = character.type;
-    
-            item.append(player, thumbnail, name, type);
+
+            item.append(player, thumbnail, name, info);
+            info.append(attack, type)
             thumbnail.append(img);
             wrapper.append(item);
         })
